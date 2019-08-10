@@ -1,0 +1,34 @@
+<div class="table-responsive">
+  <table class="table ">
+      <thead>
+          <tr>
+              <th scope="col">#</th>
+              <th scope="col">Firstname</th>
+              <th scope="col">Lastname</th>
+              <th scope="col">Email</th>
+              <th scope="col">Product</th>
+              <th scope="col">Price</th>
+              <th scope="col">Address</th>
+              <th scope="col">$PayMode</th>
+              <th scope="col">Accept</th>
+              <th scope="col">Reject</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let index of orderlist let i=index">
+              <th scope="row">{{i+1}}</th>
+              <td>{{index.user.firstName}}</td>
+              <td>{{index.user.lastName}}</td>
+              <td>{{index.user.email}}</td>
+              <td>{{index.user.service}}</td>
+              <td>{{index.price}}</td>
+              <td>{{index.user.addresses[0].address}}</td>
+              <td>cashOn</td>
+              <td><button type="button" class="btn btn-success btn-sm">Accept</button></td>
+              <td><button type="button" class="btn btn-danger btn-sm">Reject</button></td>
+          </tr>
+
+      </tbody>
+</table>
+</div>
+

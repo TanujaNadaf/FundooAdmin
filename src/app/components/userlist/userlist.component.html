@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="d-flex justify-content-around">
+  <div *ngFor="let index of userStatics">
+  <div class="card">
+    <div class="card-header">Header</div>
+    <div class="card-body">Content</div> 
+  </div>
+</div>
+  </div>
+</div>
+
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Firstname</th>
+                <th scope="col">Lastname</th>
+                <th scope="col">Email</th>
+                <th scope="col">Service</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let index of userList let i=index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{index.firstName}}</td>
+                <td>{{index.lastName}}</td>
+                <td>{{index.email}}</td>
+                <td>{{index.service}}</td>
+            </tr>
+
+        </tbody>
+</table>
+</div>
